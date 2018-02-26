@@ -1,0 +1,33 @@
+.div-serach {
+	padding: 20px 30px
+}
+
+.div-ul {
+	padding: 20px 30px;
+	width: 800px;
+}
+
+.section-blogs {
+	color: #6a6a6a;
+	word-break: break-word;
+	overflow: hidden;
+	font-size: .875rem;
+	line-height: 20px;
+	overflow: hidden;
+	height: auto;
+	max-height: 40px;
+	margin: 4px 0 6px;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	word-break: break-word;
+	color: #6a6a6a;
+	position: relative;
+}
+
+.footer-blogs {
+	align-items: center;
+	-webkit-box-align: center;
+	line-height: 20px;
+	display: flex;
+	box-sizing: border-box;
+}

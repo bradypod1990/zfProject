@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="commonHeader(title)">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title th:text="${title}"></title>
+	<link rel="stylesheet" type="text/css" media="all"
+		href="../static/css/H-ui.css" th:href="@{/css/H-ui.css}"/>
+	<link rel="stylesheet" type="text/css" media="all"
+		href="../static/css/custom.css" th:href="@{/css/custom.css}"/>
+	<script type="text/javascript" src="../static/js/jquery/1.9.1/jquery.js" th:src="@{/js/jquery/1.9.1/jquery.js}"></script>
+	<script type="text/javascript" src="../static/js/H-ui.js" th:src="@{/js/H-ui.js}"></script>
+</head>
+</html>

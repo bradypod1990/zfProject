@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="page(pageId)">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="../static/js/laypage/1.2/laypage.js" th:src="@{/js/laypage/1.2/laypage.js}"></script>
+    <script type="text/javascript" src="../static/js/jquery/1.9.1/jquery.js" th:src="@{/js/jquery/1.9.1/jquery.js}"></script>
+<script th:inline="javascript">
+$(function(){
+	 /*<![CDATA[*/
+	      var pageCount = [[${page.pageCount}]] ;
+	      var pageNum = [[${page.pageNum}]] ;
+	      var pageId = [[${pageId}]] ;
+	  /*]]>*/           
+	laypage({  
+        cont: pageId, //容器。值支持id名、原生dom对象，jquery对象。【如该容器为】：<div id="page1"></div>  
+        pages: pageCount, //通过后台拿到的总页数  
+        curr: pageNum, //初始化当前页  
+        skip: true, //是否开启跳页  
+        jump: function(e){ //触发分页后的回调  
+        	if(e.curr != pageNum) {
+        		   window.location.href="/?pageNum="+e.curr
+        	}
+        }  
+    });  
+});
+</script>
+</head>
+</html>

@@ -1,0 +1,21 @@
+spring: 
+    thymeleaf: 
+        prefix: classpath:/views/
+        suffix: .html
+        cache: false
+    application: 
+        name: zf-web
+server: 
+    port: 30001
+    servlet-path: /
+    
+eureka: 
+    client: 
+        service-url: 
+            defaultZone: http://webone:10001/eureka/
+    instance: 
+        instance-id: webone:${server.port}
+        prefer-ip-address: true
+
+providerNames: 
+    zfInter: zf-v1

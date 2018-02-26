@@ -1,0 +1,22 @@
+spring:
+    data: 
+        mongodb: 
+            uri: mongodb://com.feng.mongo:27017/test
+    application: 
+        name: zf-v1
+server: 
+    port: 20001
+eureka: 
+    instance: 
+        instance-id: webone:${server.port}
+        prefer-ip-address: true
+    client: 
+        service-url: 
+            defaultZone: http://webone:10001/eureka/
+            
+            
+            
+collection:
+    names:
+        blogsName: blogs
+collectionName: blogs
